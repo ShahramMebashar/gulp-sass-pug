@@ -71,7 +71,7 @@ gulp.task('sass', function () {
         //.pipe(cssUrlVersion({baseDir:'./build'}))
         .pipe(autoprefixer(options.autoprefixer))
         .pipe(cssnano())
-        .pipe(sourceMaps.write('.'))
+        .pipe(sourceMaps.write())
         .pipe(gulp.dest('./build/css'))
         .pipe(browserSync.stream());
 });
@@ -104,9 +104,11 @@ gulp.task('js', function () {
 
 //FIXME: copy all of assets to build folder
 gulp.task('assets', function () {
-    return gulp.src('./src/assets/images/**/*.{gif,jpg,png,svg}')
+    gulp.src('./src/assets/images/**/*.{gif,jpg,png,svg}')
         .pipe(gulp.dest('./build/images'));
-    return gulp.src('./src/assets/js/vendor/*.js')
+    gulp.src('./src/*.{htaccess,png,txt,ico,xml,json,webmanifest}')
+        .pipe(gulp.dest('./build'));
+    gulp.src('./src/assets/js/vendor/*.js')
         .pipe(gulp.dest('./build/js/vendor'));    
 })
 

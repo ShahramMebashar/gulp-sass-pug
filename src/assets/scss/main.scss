@@ -1,12 +1,4 @@
-* {
-  box-shadow: 1px 1px 1px #000;
-  transition: 0.2s ease;
-}
-p{
-  background-image: url(/images/smb-headerr.png);
-  width: 100%;
-  height:900px;
-  display: grid;
-  border-radius: 1px;
-  user-select: none;
+@import './vendor/bourbon/bourbon';
+p {
+  @include hide-visually;
 }
