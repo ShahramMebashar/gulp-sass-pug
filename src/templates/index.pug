@@ -1,0 +1,33 @@
+doctype html
+html(lang=$i18n.lang dir=$i18n.dir class="no-js")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="")
+    meta(name="author" content="")
+    title Test Page
+    link(rel="alternate", href="atom.xml", type="application/atom+xml", title="Atom")
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    link(rel="alternate", href="rss.xml", type="application/rss+xml", title="RSS")
+    link(rel="apple-touch-icon", href="favicon.png")
+    link(rel="manifest", href="manifest.json")
+    link(rel="stylesheet" href=$i18n.assets.stylesheet)
+    <!--[if lt IE 9]>
+      script(src="./assets/js/vendor/html5shiv-printshiv.min")
+    <! [endif]-->
+  body
+    h2 #{$i18n.messages.welcome}    
+    p=$i18n.messages.register  
+
+
+    <!-- load scripts -->
+    script(src="./js/vendor/modernizr-min.js" async)
+    script(src="./js/bundle.min.js" async)
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  script.
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  script(src="https://www.google-analytics.com/analytics.js" async defer)
+    

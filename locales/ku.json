@@ -1,0 +1,11 @@
+{
+  "lang": "ku",
+  "dir":"rtl",
+  "messages":{
+    "welcome": "به‌خێربێیت بو وێب سایته‌كه‌مان به‌رێز",
+    "register": "تكایه‌ خۆت تومار بكه‌"
+  },
+  "assets": {
+    "stylesheet": "../css/main.ku.css"
+  }
+}

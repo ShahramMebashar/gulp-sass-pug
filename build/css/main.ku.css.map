@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.ku.scss"],"names":[],"mappings":"AAAA,KACE,aAAc,CAGf,AAED,UAJE,UAAY,AACZ,QAAW,CAMZ","file":"main.ku.css","sourcesContent":["html{\n  direction: rtl;\n  padding: 0px;\n  margin: 0px;\n}\n\nbody {\n  margin: 0px;\n  padding: 0px;\n}\n"]}
